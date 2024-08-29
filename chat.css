@@ -1,0 +1,130 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .chat-window {
+    width: 40%;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  }
+  
+  .chat-messages {
+    padding: 20px;
+  }
+  
+  .tips-tricks {
+    width: 50%;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  }
+  
+  .tips-tricks ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .tips-tricks li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .tips-tricks li strong {
+    color: #333;
+  }
+
+  .chat-window {
+    width: 400px;
+    height: 600px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+  }
+  
+  .chat-messages {
+    padding: 20px;
+    overflow-y: auto;
+    width: 400px;
+  }
+  
+  .user-message {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .chatbot-response {
+    background-color: #ccc;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .button-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border: 1px solid black;
+    padding: 10px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: transparent;
+  }
+  .button-container button {
+    height: 50px;
+  }
+
+
+.popup-button {
+    position: relative;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.popup-button::after {
+    content: attr(data-popup);
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    transform: translateX(-50%) translateY(10px);
+    background-color: #333;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+}
+
+.popup-button:hover {
+    transform: scale(1.1);
+}
+
+.popup-button:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}

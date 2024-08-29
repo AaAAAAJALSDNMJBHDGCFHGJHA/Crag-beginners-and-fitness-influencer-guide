@@ -1,0 +1,119 @@
+body {background-color: rgb(240, 210, 131); background-image: url(Screenshot\ 2024-07-17\ at\ 12.49.40\ PM.png); background-repeat: no-repeat;}
+
+
+.button-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border: 1px solid black;
+    padding: 10px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: transparent;
+  }
+  .button-container button {
+    height: 50px;
+  }
+
+
+.popup-button {
+    position: relative;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.popup-button::after {
+    content: attr(data-popup);
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    transform: translateX(-50%) translateY(10px);
+    background-color: #333;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+}
+
+.popup-button:hover {
+    transform: scale(1.1);
+}
+
+.popup-button:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    background-repeat: no-repeat;
+  }
+
+
+  .popup-button {
+    position: relative;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.popup-button::after {
+    content: attr(data-popup);
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    transform: translateX(-50%) translateY(10px);
+    background-color: #333;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+}
+
+
+.popup-button:hover {
+    transform: scale(1.1);
+}
+
+.popup-button:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.button-container {
+    display: flex;
+    gap: 10px;
+    position: relative;
+    width: fill;
+}
+
+.expand-button {
+    width: 100%; /* Adjust the width as needed */
+    height: 1px;
+    overflow: hidden;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    transition: height 0.3s ease, padding 0.3s ease;
+}
+
+.expand-button:hover {
+    height: 50px;
+    padding: 10px 20px;
+}
